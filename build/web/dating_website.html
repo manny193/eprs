@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <style>
+        fieldset {background:lightyellow; border:10px solid yellow; margin-bottom:10px; width:720px}
+        label {width:180px; display:inline-block; vertical-align: top; text-align: right}
+        textarea {width:360px; height:50px}
+        label:hover { font-size:20px }
+        input:hover { font-size:20px }
+        .c1 {width:auto}
+        .c2 {text-align: center; color:white; background-color: brown}
+        .c3 {text-align: center; color:white; background-color: purple}
+    </style>
+    <title>Dating Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h3>Please Enter Your Details For Our Dating Website!</h3>
+<form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="GET" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Your Face</legend>
+        <label for="imgfile">Your image: </label>
+        <input type="file" id="imgfile" name="imgfile" required/><br>
+        <label for="preview">Image Preview: </label>
+        <img id="preview" width="50" height='50'/>
+    </fieldset>
+    <fieldset>
+        <legend>Your General Details</legend>
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" required placeholder="Your Full Name"/>
+        <br><label>Gender: </label>
+        <input type="radio" id="male" name="gender" value="male" required/><label for="male" class='c1'>Male</label>
+        <input type="radio" id="female" name="gender" value="male" required/><label for="female" class='c1'>Female</label><br>
+        <label for="age">Age: </label>
+        <input type="number" step="1" min="5" id="age" name="age" required/><br>
+        <label for="bday">Date of Birth: </label>
+        <input type="date" id="bday" name="bday"/><br>
+        <label for="color">Favorite Color: </label>
+        <input type="color" id="color" name="color"/><br>
+        <label for="country">Which Country: </label>
+        <select id="country" name="country">
+            <option value="none">no selection</option>
+            <option value="IN">INDIA</option>
+            <option value="PAK">PAKISTAN</option>
+            <option value="BD">BANGLADESH</option>
+            <option value="MYR">MYANMAR</option>
+            <option value="SL">SRILANKA</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Your Indicators</legend>
+        <label for="ht">Height: </label>
+        <span class="c2 c1"> Short </span><input type="range" min="0" max="100" value="50" id="ht" name="height"/> <span class="c3 c1"> Tall </span><br>
+        <label for="sal">Salary: </label>
+        <span class="c2 c1"> Poor </span><input type="range" min="0" max="100" value="50" id="sal" name="salary"/> <span class="c3 c1"> Rich </span>
+    </fieldset>
+    <fieldset>
+        <legend>Your Contact Information</legend>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" required/><br>
+        <label for="mob">Mobile: </label>
+        <input type="tel" id="mob" name="mobile"/><br>
+        <label for="add">Address: </label>
+        <textarea id="add">Enter address </textarea><br>
+        <br>Method to contact you: 
+        <label class='c1'><input type="checkbox" value="email" name="contact"/>Email</label>
+        <label class='c1'><input type="checkbox" value="whatsapp" name="contact"/>Whatsapp</label>
+        <label class='c1'><input type="checkbox" value="in-app chat" name="contact"/>In-app chat</label>
+    </fieldset>
+    <input type='submit' name='submit' value='submit'/>    
+</form>
+<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+</body>
+</html>
+
+

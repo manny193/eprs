@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            var target;
+            var guesses;
+            var input;
+            var color=["red","orange","blue","green","cyan","black","brown","magenta"];
+            var finished=false;
+            function guess(){
+                var i=Math.floor(Math.random()*8);
+                target=color[i];
+                while(!finished){
+                    input=prompt("I have guessed a color from the list below. what is my guess?\n\nblack,blue,brown,cyan,green,magenta,orange,red\n");
+                    if(input==target){
+                        alert("Congratulations! ")
+                    }
+                    
+                }
+            }
+        </script>
+    </body>
+</html>
